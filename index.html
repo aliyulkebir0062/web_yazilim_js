@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="document.getElementById('Tarih').innerHTML=Date()">Tarihi Öğren</button>
+    <p id="Tarih"></p>
+
+    <button type="button" onclick="dongu()">Övgü</button>
+    <p id="ovgu"></p>
+
+    <button onclick="small()">Yazıyı Küçült</button>
+    <button onclick="big()">Yazıyı Büyüt</button>
+
+    <script>
+        function dongu(){
+            let text="";
+            for(sayi=0; sayi<100;sayi+=2){
+                text+="ben mükemmelim" + sayi +"<br>"; 
+            }
+            document.getElementById("ovgu").innerHTML=text;
+        }
+        function small(){
+            document.getElementById("ovgu").style.fontSize="10px"
+        }
+        function big(){
+            document.getElementById("ovgu").style.fontSize="40px"
+            document.getElementById("ovgu").style.color="red"
+
+        }
+    </script>
+</body>
+</html>
